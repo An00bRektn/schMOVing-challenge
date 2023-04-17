@@ -58,9 +58,9 @@ def movAttack(G, Q, p, a, b):
     alpha = Ge.weil_pairing(B, n)
     beta = Qe.weil_pairing(B, n)
 
-    p = log.progress('Computing log...')
+    loading = log.progress('Computing log...')
     nQ = beta.log(alpha)
-    p.success(f"Scalar: {nQ}")
+    loading.success(f"Scalar: {nQ}")
     return nQ
 
 # see `source.py`
